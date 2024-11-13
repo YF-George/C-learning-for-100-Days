@@ -1,14 +1,16 @@
 #include <stdio.h>
 
 // 函數用於讀取整數並返回其值
-int readInteger(int index) {
+int readInteger(int index)
+{
     int value;
     printf("請輸入第 %d 個整數：", index);
     scanf("%d", &value);
     return value;
 }
 
-int main() {
+int main()
+{
     // 第一種寫法：一次性讀取所有整數並計算總和
     int integer1, integer2, integer3, sum1;
     printf("第一種寫法：\n");
@@ -16,7 +18,7 @@ int main() {
     integer2 = readInteger(2); // 讀取第二個整數
     integer3 = readInteger(3); // 讀取第三個整數
 
-    sum1 = integer1 + integer2 + integer3;  // 計算總和
+    sum1 = integer1 + integer2 + integer3;         // 計算總和
     printf("總和（第一種寫法）是 %d。\n\n", sum1); // 顯示總和
 
     // 第二種寫法：每次讀取一個整數並累加
@@ -37,13 +39,17 @@ int main() {
     printf("你想計算多少個整數的總和？ ");
     scanf("%d", &n);
 
-    for (i = 1; i <= n; i++) {
+    for (i = 1; i <= n; i++)
+    {
         int num = readInteger(i); // 讀取每個整數
-        sum3 += num;               // 累加到總和
-        if (i < n) {
-            printf("%d + ", num);  // 顯示中間過程
-        } else {
-            printf("%d = %d\n", num, sum3);  // 顯示最終結果
+        sum3 += num;              // 累加到總和
+        if (i < n)
+        {
+            printf("%d + ", num); // 顯示中間過程
+        }
+        else
+        {
+            printf("%d = %d\n", num, sum3); // 顯示最終結果
         }
     }
 

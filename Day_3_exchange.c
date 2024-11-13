@@ -1,6 +1,7 @@
 #include <stdio.h> // 引入標準輸入輸出函式庫，提供基本的輸入輸出功能
 
-int main(void) {
+int main(void)
+{
     int integer1, integer2, temp; // 宣告兩個整數變數以及一個臨時變數 temp 用於交換操作
 
     // 輸入兩個整數
